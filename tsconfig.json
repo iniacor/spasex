@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "esnext",
+    "lib": ["ESNext", "dom", "dom.iterable"],
+    "allowJs": true,
+    "jsx": "react",
+    "noEmit": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@store/*": ["src/store/*"],
+      "@common/*": ["src/common/*"],
+      "@theme/*": ["src/theme/*"],
+      "@theme": ["src/theme"]
+    },
+    /* Strict Type-Checking Options */
+    "strict": false,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+
+    /* Module Resolution Options */
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true
+  },
+  "exclude": ["node_modules", "out"],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "src", "src/custom.d.ts"]
+}
