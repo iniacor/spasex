@@ -14,7 +14,7 @@ export const SignInButton = styled.button<SignInButtonProps>`
   cursor: pointer;
   &:hover {
     outline-offset: 3px;
-    transition: 0.5s all ease-out;
+    transition: 0.2s all ease-out;
   }
   &:active {
     background-color: ${({ theme }) => theme.colors.primary.dark};

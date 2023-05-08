@@ -22,7 +22,7 @@ export const BackgroundImageContainer = styled.div`
   align-items: center;
   height: 500px;
   width: 100%;
-  background-image: url(public/favouritesbg.jpg);
+  background-image: url(src/assets/images/favouritesbg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

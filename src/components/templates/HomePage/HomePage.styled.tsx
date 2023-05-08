@@ -14,7 +14,7 @@ export const MainScreen = styled.section`
   align-items: center;
   height: 100vh;
   width: 100%;
-  background-image: url(public/banner1.jpg);
+  background-image: url(src/assets/images/banner1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
