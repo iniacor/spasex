@@ -9,7 +9,7 @@ type FavoriteButtonProps = {
 };
 
 export default function FavoriteButton({ goToFavorites }: FavoriteButtonProps) {
-  const isFavorites = useAppSelector(selectFavoriteProductIds).length;
+  const isFavorites = useAppSelector(selectFavoriteProductIds).length > 0;
   return (
     <Styled.FavoriteButton
       onClick={goToFavorites}

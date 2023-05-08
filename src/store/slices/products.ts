@@ -26,7 +26,7 @@ const productsSlice = createSlice({
   name: 'products',
   initialState: productsAdapter.getInitialState({
     status: LoadingStatus.IDLE,
-    error: null,
+    error: null as string | null,
   }),
   reducers: {},
   extraReducers: (builder) => {

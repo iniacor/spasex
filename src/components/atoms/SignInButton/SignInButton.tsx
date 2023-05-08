@@ -3,7 +3,7 @@ import * as Styled from './SignInButton.styled';
 
 const SignInButton = () => {
   return (
-    <Styled.SignInButton onClick={() => console.log('i am sign in button')}>
+    <Styled.SignInButton>
       <Styled.ButtonText>sign in</Styled.ButtonText>
     </Styled.SignInButton>
   );

@@ -162,12 +162,6 @@ export const SlickSlider = styled(Slider)`
   }
 `;
 
-export const ProductsList = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
-
 export const ToursTitle = styled.h2`
   margin-bottom: 43px;
   font-family: 'Syne';

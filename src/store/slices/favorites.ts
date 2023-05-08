@@ -1,7 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import type { Product } from '../../types/entities';
-
-type FavoritesState = Pick<Product, 'id'>[];
+type FavoritesState = string[];
 
 const initialState: FavoritesState = [];
 

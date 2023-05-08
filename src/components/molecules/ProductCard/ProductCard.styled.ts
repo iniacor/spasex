@@ -12,12 +12,12 @@ export const ProductCardItem = styled.div`
 `;
 
 export const ProductImageWrapper = styled.div`
-  width: 394px;
-  height: 296px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 28px;
+  max-width: 394px;
+  height: 296px;
 `;
 
 export const ProductImage = styled.img`

@@ -1,11 +1,20 @@
 import React from 'react';
-import * as Styled from './ToursSlider.styled';
 import ProductCard from '@components/molecules/ProductCard/ProductCard';
 import { useAppSelector } from '@hooks/useAppSelector';
 import { selectorAllProducts } from '@store/selectors';
+import { useLocalStorageCounter } from '@hooks/useLocalStorageCounter';
+import imagesSet from '../../../common/data/data';
+import * as Styled from './ToursSlider.styled';
 
 const ToursSlider = () => {
   const products = useAppSelector(selectorAllProducts);
+  const { counter } = useLocalStorageCounter();
+
+  const getCurrentImage = (imageIndex: number) => {
+    const currentIndex = imageIndex % imagesSet.length;
+    return imagesSet[currentIndex].src;
+  };
+
   const settings = {
     dots: true,
     infinite: true,
@@ -45,11 +54,16 @@ const ToursSlider = () => {
       <Styled.ToursTitle>popular tours</Styled.ToursTitle>
       <Styled.SlickSlider {...settings}>
         {!!products.length &&
-          products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+          products.map((product, index) => (
+            <ProductCard
+              key={product.id}
+              product={product}
+              currentImage={getCurrentImage(counter - index)}
+            />
           ))}
       </Styled.SlickSlider>
     </Styled.SliderWrapper>
   );
 };
+
 export default ToursSlider;

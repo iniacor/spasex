@@ -16,6 +16,9 @@ export const SignInButton = styled.button<SignInButtonProps>`
     outline-offset: 3px;
     transition: 0.5s all ease-out;
   }
+  &:active {
+    background-color: ${({ theme }) => theme.colors.primary.dark};
+  }
 `;
 export const ButtonText = styled.p`
   font-family: 'Syne';

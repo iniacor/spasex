@@ -2,14 +2,14 @@ import React from 'react';
 import type { FC, ReactNode } from 'react';
 
 import {
-  ITheme,
+  DefaultTheme,
   ThemeProvider as StyledComponentProvider,
 } from 'styled-components';
 import GlobalStyle from './GlobalStyle';
 
 type ThemeProviderProps = {
   children: ReactNode;
-  theme: ITheme;
+  theme: DefaultTheme;
 };
 
 const ThemeProvider: FC<ThemeProviderProps> = ({ children, theme }) => {

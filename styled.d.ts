@@ -22,10 +22,5 @@ declare module 'styled-components' {
         contrastText: string;
       };
     };
-    fontSizes: {
-      small: string;
-      medium: string;
-      large: string;
-    };
   }
 }

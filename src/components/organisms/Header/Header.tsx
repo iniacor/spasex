@@ -2,10 +2,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../../../assets/icons/Logo.svg';
-import * as Styled from './Header.styled';
 import FavoriteBtnLink from '@components/atoms/FavoriteBtnLink/FavoriteBtnLink';
 import SignInButton from '@components/atoms/SignInButton/SignInButton';
 import Container from '../Container/Container';
+import * as Styled from './Header.styled';
 
 const Header = () => {
   const navigate = useNavigate();
