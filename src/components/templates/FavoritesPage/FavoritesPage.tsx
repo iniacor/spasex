@@ -8,11 +8,16 @@ import { useLocalStorageCounter } from '@hooks/useLocalStorageCounter';
 import { selectedFavoriteProducts } from '@store/selectors';
 import imagesSet from '../../../common/data/data';
 import * as Styled from './FavoritesPage.styled';
+import EmptyCard from '@components/molecules/EmptyCard /EmptyCard';
 
 export const FavoritePage = () => {
   const favoriteProducts = useAppSelector(selectedFavoriteProducts);
   const { removeAllFavorites } = useActions();
   const { counter } = useLocalStorageCounter();
+
+  const productSceletonContainer = Array(
+    Math.ceil(favoriteProducts.length / 3) * 3
+  ).fill(undefined);
 
   const getCurrentImage = (imageIndex: number) => {
     const currentIndex = imageIndex % imagesSet.length;
@@ -37,14 +42,18 @@ export const FavoritePage = () => {
           <Styled.FavouritesContent>
             <ClearButton removeAllHandler={removeAllHandler} />
             <Styled.ProductsList>
-              {!!favoriteProducts.length &&
-                favoriteProducts.map((favouriteProduct, index) => (
-                  <ProductCard
-                    key={favouriteProduct.id}
-                    product={favouriteProduct}
-                    currentImage={getCurrentImage(counter - index)}
-                  />
-                ))}
+              {productSceletonContainer.map((el, ind) => {
+                if (ind < favoriteProducts.length) {
+                  return (
+                    <ProductCard
+                      key={favoriteProducts[ind].id}
+                      product={favoriteProducts[ind]}
+                      currentImage={getCurrentImage(counter - ind)}
+                    />
+                  );
+                }
+                return <EmptyCard key={ind} />;
+              })}
             </Styled.ProductsList>
           </Styled.FavouritesContent>
         </Container>
