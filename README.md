@@ -1,6 +1,7 @@
 #  SpaceX test
 
 ### React-powered SPA for visualisation rockets info from spaceX API.
+### Application available via  [link](https://clever-capybara-6b4f61.netlify.app)  👈🏻
 
 ## ⚙️ Used technologies:
 
