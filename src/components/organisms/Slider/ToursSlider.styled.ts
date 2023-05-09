@@ -155,10 +155,10 @@ export const SlickSlider = styled(Slider)`
     background-position: center center;
   }
   .slick-prev:before {
-    background-image: url(src/assets/icons/ArrowLeft.svg);
+    background-image: url(/icons/ArrowLeft.svg);
   }
   .slick-next:before {
-    background-image: url(src/assets/icons/ArrowRight.svg);
+    background-image: url(/icons/ArrowRight.svg);
   }
 `;
 

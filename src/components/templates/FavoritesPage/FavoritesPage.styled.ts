@@ -22,7 +22,7 @@ export const BackgroundImageContainer = styled.div`
   align-items: center;
   height: 500px;
   width: 100%;
-  background-image: url(src/assets/images/favouritesbg.jpg);
+  background-image: url(/images/favouritesbg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -36,6 +36,7 @@ export const BackgroundImage = styled.img`
 `;
 
 export const FavouritesContent = styled.section`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -14,7 +14,7 @@ export const MainScreen = styled.section`
   align-items: center;
   height: 100vh;
   width: 100%;
-  background-image: url(src/assets/images/banner1.jpg);
+  background-image: url(/images/banner1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -67,7 +67,7 @@ export const ExploreLink = styled.a`
     top: 0;
     width: 40px;
     height: 40px;
-    background-image: url(src/assets/icons/ArrowDown.svg);
+    background-image: url(/icons/ArrowDown.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

@@ -5,9 +5,8 @@ type ClearButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const ClearAllButton = styled.button<ClearButtonProps>`
   position: absolute;
-  right: 110px;
-  top: 50px;
-  bottom: 0px;
+  right: 0px;
+  top: 40px;
   display: inline-block;
   background-color: transparent;
   border: none;
